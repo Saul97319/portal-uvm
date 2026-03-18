@@ -87,19 +87,25 @@ const App = () => {
     initAuth();
 
     const unsubscribe = onAuthStateChanged(auth, async (u) => {
-      if (u) {
-        // Fetch or create profile if needed (simulated for this demo)
-        const profileRef = doc(db, 'artifacts', appId, 'users', u.uid, 'profile', 'info');
-        const snap = await getDoc(profileRef);
-        if (snap.exists()) {
-          setUserProfile(snap.data());
+      try {
+        if (u) {
+          // Fetch or create profile if needed (simulated for this demo)
+          const profileRef = doc(db, 'artifacts', appId, 'users', u.uid, 'profile', 'info');
+          const snap = await getDoc(profileRef);
+          if (snap.exists()) {
+            setUserProfile(snap.data());
+          }
+          setUser(u);
+        } else {
+          setUser(null);
+          setUserProfile(null);
         }
-        setUser(u);
-      } else {
-        setUser(null);
-        setUserProfile(null);
+      } catch (error) {
+        console.error("Error al cargar datos de Firebase:", error);
+      } finally {
+        // Esto garantiza que la pantalla de carga se quite, haya éxito o error
+        setLoading(false);
       }
-      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
