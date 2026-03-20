@@ -27,7 +27,6 @@ Servicios de Terceros: EmailJS para el enrutamiento de correos electrónicos sin
  Estructura del Proyecto
 El proyecto sigue una arquitectura clásica de una Single Page Application (SPA) construida con React y Vite:
 
-Plaintext
 portal-uvm/
 ├── public/
 │   ├── logo.png             # Logotipo institucional
