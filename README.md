@@ -27,18 +27,19 @@ Servicios de Terceros: EmailJS para el enrutamiento de correos electrónicos sin
  Estructura del Proyecto
 El proyecto sigue una arquitectura clásica de una Single Page Application (SPA) construida con React y Vite:
 
-Plaintext
 portal-uvm/
-├── public/
-│   ├── logo.png             # Logotipo institucional
-│   └── vite.svg             # Favicon
-├── src/
-│   ├── App.jsx              # Archivo principal: Contiene el enrutamiento, lógica de vistas (Login, Dashboard, Chat, Admin) y la conexión a Firebase
-│   ├── main.jsx             # Punto de entrada de la aplicación React
-│   └── index.css / App.css  # Estilos globales e inyección de Tailwind
-├── package.json             # Dependencias y scripts del proyecto
-├── vite.config.js           # Configuración del empaquetador de módulos
-└── eslint.config.js         # Reglas de linteo para el código
+|-- public/
+|   |-- logo.png             # Logotipo institucional
+|   `-- vite.svg             # Icono de Vite
+|-- src/
+|   |-- assets/              # Recursos multimedia
+|   |-- App.jsx              # Lógica principal, Firebase y Rutas
+|   |-- main.jsx             # Punto de entrada de React
+|   `-- index.css            # Estilos globales y Tailwind
+|-- package.json             # Dependencias (React, Firebase, EmailJS)
+|-- vite.config.js           # Configuración del proyecto
+|-- .gitignore               # Archivos excluidos (node_modules)
+`-- README.md
 
  Instalación y Configuración
 1. Clonar el repositorio
