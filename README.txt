@@ -68,4 +68,3 @@ Estudiantes: Dominio @my.uvm.edu.mx (Ej. juan@my.uvm.edu.mx). Pueden crear citas
 Asesores: Dominio @myuvm.asesores.mx (Ej. asesor1@myuvm.asesores.mx). Pueden ver las citas de los alumnos y responder mensajes.
 
 Administradores: Dominio @myuvm.admin.mx (Ej. admin@myuvm.admin.mx). Tienen acceso exclusivo al Panel de Gestión para dar de alta a nuevos usuarios.
-
