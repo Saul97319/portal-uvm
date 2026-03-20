@@ -47,3 +47,5 @@ yarn-error.log*
 # Entornos virtuales de Python
 venv/
 .venv/
+
+node_modules/
